@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>BillBuddy</title>
+    <link rel="stylesheet" href="/css/stocks.css">
+    <link rel="icon" type="icon/x-image" href="/Image/edit.png">
+    
+</head>
+
+<body>
+    <div class="box" id="heading">
+        <h1>
+            Stocks
+        </h1>
+    </div>
+
+    <div class="box">
+        <% if(stocks.length !==0) { %>
+            <% stocks.forEach(function(stock){ %>
+                <form action="/delete/<%= name %>/<%= email %>" method="post">
+                    <div class="item">
+                        <input type="checkbox" name="checkbox" value="<%= stock._id %>" onchange="this.form.submit()">
+                        <a href="/stats/<%= name %>/<%= stock.shares %>/<%= email %>">
+                            <p>
+                                <%= stock.shares %>
+                            </p>
+                        </a>
+                    </div>
+                    <input type="hidden" name="listName" value="<%= name %>">
+                </form>
+            <% }) %>
+        <% } %>
+
+        <form class="item" action="/stocks/<%= name %>/<%= email %>" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value="<%= name %>">+</button>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
