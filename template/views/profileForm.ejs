@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BillBuddy</title>
+        <link rel="icon" type="icon/x-image" href="/Image/edit.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="colorlib.com">
+
+        <!-- MATERIAL DESIGN ICONIC FONT -->
+        <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+        <!-- STYLE CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <form action="/profileDash" id="wizard" method="POST">
+                <!-- SECTION 1 -->
+                <h2></h2>
+                <section>
+                    <div class="inner">
+                        <div class="image-holder">
+                            <img src="/Image/form-wizard-1.jpg" alt="">
+                        </div>
+                        <div class="form-content" >
+                            <div class="form-header">
+                                <h3>Profile Form</h3>
+                            </div>
+                            <p>Please fill with your details</p>
+                            <div class="form-row">
+                                <div class="form-holder">
+                                    <input type="text" name="fname" placeholder="First Name" class="form-control" >
+                                </div>
+                                <div class="form-holder">
+                                    <input type="text" name="lname" placeholder="Last Name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-holder">
+                                    <input type="text" name="email" placeholder="Your Email" class="form-control">
+                                </div>
+                                <div class="form-holder">
+                                    <input type="text" name="pno" placeholder="Phone Number" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-holder">
+                                    <input type="text" name="age" placeholder="Age" class="form-control">
+                                </div>
+                                <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                                    <div class="checkbox-tick">
+                                        <label class="male">
+                                            <input type="radio" name="gender" value="Male" checked>Male<br>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="female">
+                                            <input type="radio" name="gender" value="Female">Female<br>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 2 -->
+                <h2></h2>
+                <section>
+                    <div class="inner">
+                        <div class="image-holder">
+                            <img src="/Image/form-wizard-2.jpg" alt="">
+                        </div>
+                        <div class="form-content">
+                            <div class="form-header">
+                                <h3>Profile Form</h3>
+                            </div>
+                            <p>Please fill the additional info</p>
+                            <div class="form-row">
+                                <div class="form-holder w-100">
+                                    <input type="text" name="income" placeholder="Income" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-holder">
+                                    <input type="text" name="job" placeholder="Job" class="form-control">
+                                </div>
+                                <div class="form-holder">
+                                    <input type="text" name="esavings" placeholder="Expected Savings" class="form-control">
+                                </div>
+                            </div>
+                            <div class ="btn">
+                                <button class="btn-primary" type="submit">Submit</button>
+                            </div>
+
+
+
+                        </div>
+
+                        </div>
+                    </div>
+                
+                </section>
+
+            
+            </form>
+        </div>
+
+        <!-- JQUERY -->
+        <script src="/js/jquery-3.3.1.min.js"></script>
+
+        <!-- JQUERY STEP -->
+        <script src="/js/jquery.steps.js"></script>
+        <script src="/js/main.js"></script>
+        <!-- Template created and distributed by Colorlib -->
+</body>
+</html>

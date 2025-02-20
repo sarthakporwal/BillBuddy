@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BillBuddy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/expense.css">
+</head>
+
+<body>
+  <header>
+    <h1>Expense Sharing</h1>
+  </header>
+  <main>
+    <form action="/expense/<%= name %>" method="post" id="expenseForm">
+      <label for="groupName">Group Name:</label>
+      <input type="text" name="groupName" id="groupName" required>
+
+      <label for="inviteEmail">Invite Friend to Group (Email):</label>
+      <input type="email" name="email" id="inviteEmail">
+
+      <label for="inviteEmail">Add Expense:</label>
+      <input type="number" name="expense" id="inviteEmail">
+
+      <button type="submit" name="button" value="create">Create Group</button>
+      <button type="submit" name="button" value="join">Join Group</button>
+      <button type="submit" name="button" value="add">Add Expense</button>
+      <button type="submit" name="button" value="invite">Invite to Group</button>
+    </form>
+
+    <!-- Group section -->
+    <div id="groupSection">
+      <h2>Your Groups</h2>
+      <% if(group.length !==0) { %>
+        <% group.forEach(function(groups) { %>
+          <ul id="groupList">
+          <a  href="/viewGroup/<%= name %>/<%= groups.name %>" style="list-style: none; text-decoration: none; color: rgb(51, 51, 51);">
+            <li>
+              <%= groups.name %>
+            </li>
+          </a>
+          </ul>
+          <% }) %>
+            <% } %>
+    </div>
+
+    <!-- Participants and Expenses -->
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

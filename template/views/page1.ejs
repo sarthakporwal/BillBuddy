@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillBuddy</title>
+    <link rel="stylesheet" href="/css/page1.css">
+    <link rel="icon" type="icon/x-image" href="/Image/edit.png">
+    <script src="/js/page1.js" defer></script>
+</head>
+    <body class="body">
+        <div class="action">
+            <div class="profile" onclick="menuToggle();">
+                <img src="/Image/img.jpg">
+            </div>
+            <div class="menu" style="width: auto;">
+                <h3><%= name%><br><span><%= email%></span></h3>
+                <ul>
+                    <li><img src="/Image/user.png"><a href="/dashboard/<%= name %>/<%= email%>">Dashboard</a></li>
+                    <li><img src="/Image/envelope.png"><a href="#">Inbox</a></li>
+                    <!-- <li><img src="/Image/settings.png"><a href="/settings">Settings</a></li>
+                    <li><img src="/Image/question.png"><a href="/help">Help</a></li> -->
+                    <li><img src="/Image/log-out.png"><a href="/login">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav">
+            <i class="uil uil-bars navOpenBtn"></i>
+            <a href="#" class="logo" style="margin-left: auto;">BillBuddy</a>
+    
+            <ul class="nav-links">
+                <i class="uil uil-times navCloseBtn"></i>
+                <!-- <li><a href="/addExpense" id="n">Add Expense</a></li> -->
+                <li style="margin-left: 100px ;"><a href="/addExpense/<%= name %>" id="n">Add Expense</a></li>
+                <li><a href="/viewExpense/<%=  name %>" id="n">View Expense</a></li>
+                <li><a href="/expense/<%= name %>" id="n">Group Expenses</a></li>
+                <li><a href="/stocks/<%= name%>" id="n">Stock Watchlist</a></li>
+                <!-- <li><a href="#" id="n">User Savings</a></li> -->
+                <img src="/Image/light.png" id="icon">
+            </ul>
+
+            
+        
+        </nav>
+        <div class="whole-area">
+        <div class="container1">
+            <div class="box">
+                <div class="content">
+                    <img src="/Image/Ratan_Tata_photo.jpg">
+                    <p><a href="#"><i> "Ups and downs in life are very important to keep us going, because a straight line even in an ECG means we are not alive."</i><br><br>~Ratan Tata</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="/Image/mukku.jpg">
+                    <p><a href="#">"If you don't build your dream, someone else will hire you to help them build theirs."<br><br>~Mukesh Ambani</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="/Image/elon.jpg">
+                    <p><a href="#"> "When something is important enough, you do it even if the odds are not in your favor."<br><br>~Elon Musk</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="/Image/steve.jpg">
+                    <p><a href="#">"Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work."<br><br>~Steve Jobs</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="/Image/bill.jpg">
+                    <p><a href="#">"It's fine to celebrate success, but it is more important to heed the lessons of failure."<br><br>~Bill Gates</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="/Image/warren.jpg">
+                    <p><a href="#">"The best investment you can make is in yourself."<br><br>~Warren Buffett</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="/Image/mark.jpg">
+                    <p><a href="#">"The biggest risk is not taking any risk. In a world that's changing really quickly, the only strategy that is guaranteed to fail is not taking risks."<br><br>~Mark Zuckerberg</a></p>
+                </div>
+            </div>
+            <!-- <div class="box">
+                <div class="content">
+                    <img src="code (1).png">
+                    <p><a href="https://discord.gg/PKkrNUcPBx">Discord server of CC Club of MNNIT,Allahabad</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="code.png">
+                    <p><a href="https://www.facebook.com/groups/ccqueries">MNNIT CC Queries group on Facebook</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="coding.png">
+                    <p><a href="https://instagram.com/cc.club.mnnit?igshid=YmMyMTA2M2Y=">Instagram page of CC Club of MNNIT,Allahabad</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="school.png">
+                    <p><a href="https://www.youtube.com/@MnnitOfficial">Youtube channel of MNNIT,Allahabad</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="photography.png">
+                    <p><a href="https://www.youtube.com/@mediahouseofmnnit1930">Youtube channel of Media House of MNNIT,Allahabad</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="robot.png">
+                    <p><a href="https://www.youtube.com/@roboticsclub3742/">Youtube channel of Robotics Club of MNNIT,Allahabad</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="aero.png">
+                    <p><a href="https://www.youtube.com/@aeroclubmnnit3964">Youtube channel of Aerodynamics Club of MNNIT,Allahabad</a></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <img src="aero.png">
+                    <p><a href="https://www.youtube.com/@aeroclubmnnit3964">Youtube channel of Aerodynamics Club of MNNIT,Allahabad</a></p>
+                </div>
+            </div>
+     -->
+        </div>
+    </div>
+        <script>
+
+            function menuToggle(){
+                const toggleMenu = document.querySelector('.menu');
+                toggleMenu.classList.toggle('active')
+            }
+        </script>
+    </body>
+    </html>
+    
+    <script>
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.menu');
+            toggleMenu.classList.toggle('active')
+        }
+    </script>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick=function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")){
+                icon.src="/Image/dark.png"
+            }
+            else{
+                icon.src="/Image/light.png"
+            }
+        }
+    </script>
+</body>
+</html>
